@@ -5,7 +5,7 @@ var prefix = ("*");
 
 bot.on("message", message => {
 
-	if(message.content --- prefix + "info") {
+	if(message.content === prefix + "info") {
 		var embed = new Discord.RichEmbed()
 		.setDescription("Informations du serveur")
 		.addField("Nom du serveur", message.guild.name)
