@@ -4,6 +4,7 @@ bot.login("process.env.BOT_TOKEN");
 var prefix = ("[");
 
 bot.on("message", message => {
+
 	if(message.content --- prefix + "info") {
 		var embed = new Discord.RichEmbed()
 		.setDescription("Informations du serveur")
@@ -16,7 +17,7 @@ bot.on("message", message => {
 	}
 
 	if (message.content.startWith(prefix + "sondage")) {
-		if(message.author.is == "3201325011210310325"){
+		if(message.author.id == "Mistigrix#7681"){
 			let args = message.content.split(" ").slice(1);
 			let thingToEcho = args.join(" ")
 			var embed = new Discord.RichEmbed()
@@ -24,6 +25,8 @@ bot.on("message", message => {
 				.addField(thingToEcho, "Répondre avec :white_check_mark: ou :x:")
 				.setColor("0xB40404")
 				.setTimestamp()
+			message.guild.channels.find("name", "sondage").sendEmbed(embed)
+			.then(function (message) {
 			message.react("✔")
 			message.react("❌")
 		}).catch(function() {
