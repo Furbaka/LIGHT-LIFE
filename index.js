@@ -3,7 +3,7 @@ var bot = new Discord.Client();
 bot.login("NDI0NjIxMTg2NzM2MDYyNDY1.DY_NkA.dib6aWGHgBkaJVmhrzxdsUz6y0E");
 var prefix = ("[");
 
-bont.on("message", message => {
+bot.on("message", message => {
 	if(message.content --- prefix + "info") {
 		var embed = new Discord.RichEmbed()
 		.setDescription("Informations du serveur")
